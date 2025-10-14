@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Club Signup</title>
+</head>
+<body>
+
+    <h1>Join Our Book Club! 📚</h1>
+
+    <form action="#">
+        
+        <h2>Book Club Signup Form</h2>
+        
+        <div>
+            <label for="full_name">Full Name:</label>
+            <input type="text" id="full_name" name="full_name" required>
+        </div>
+
+        <div>
+            <label for="email_address">Email Address:</label>
+            <input type="email" id="email_address" name="email_address" required>
+        </div>
+
+        <fieldset>
+            <legend>Favorite Genres (Select all that apply):</legend>
+            
+            <div>
+                <input type="checkbox" id="genre_fiction" name="genre[]" value="fiction">
+                <label for="genre_fiction">Fiction</label>
+            </div>
+            
+            <div>
+                <input type="checkbox" id="genre_mystery" name="genre[]" value="mystery">
+                <label for="genre_mystery">Mystery</label>
+            </div>
+            
+            <div>
+                <input type="checkbox" id="genre_scifi" name="genre[]" value="sci-fi">
+                <label for="genre_scifi">Sci-Fi</label>
+            </div>
+            
+            <div>
+                <input type="checkbox" id="genre_nonfiction" name="genre[]" value="non-fiction">
+                <label for="genre_nonfiction">Non-Fiction</label>
+            </div>
+            
+            <div>
+                <input type="checkbox" id="genre_other" name="genre[]" value="other">
+                <label for="genre_other">Others</label>
+            </div>
+        </fieldset>
+
+        <fieldset>
+            <legend>How often do you read?</legend>
+            
+            <div>
+                <input type="radio" id="read_daily" name="reading_frequency" value="daily" required>
+                <label for="read_daily">Daily</label>
+            </div>
+            
+            <div>
+                <input type="radio" id="read_weekly" name="reading_frequency" value="weekly">
+                <label for="read_weekly">Weekly</label>
+            </div>
+            
+            <div>
+                <input type="radio" id="read_occasionally" name="reading_frequency" value="occasionally">
+                <label for="read_occasionally">Occasionally</label>
+            </div>
+        </fieldset>
+
+        <div>
+            <label for="favorite_author">Favorite Author:</label>
+            <input type="text" id="favorite_author" name="favorite_author">
+        </div>
+
+        <div>
+            <label for="reading_reason">Why do you love reading? (Short Answer):</label>
+            <textarea id="reading_reason" name="reading_reason" rows="4" cols="50"></textarea>
+        </div>
+
+        <div>
+            <button type="submit">Submit My Application</button>
+        </div>
+
+    </form>
+
+</body>
+</html>

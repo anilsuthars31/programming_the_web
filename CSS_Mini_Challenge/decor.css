@@ -1,0 +1,65 @@
+/* General page styling */
+body {
+  background-color: #f1dcb7;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  font-family: "Poppins", sans-serif;
+  margin: 0;
+}
+
+/* Card container */
+.card {
+  background-color: rgb(250, 238, 238);
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+  overflow: hidden;
+  width: 320px;
+  transition: transform 0.2s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+/* Image styling */
+.card img {
+  width: 100%;
+  height: 160px;
+  object-fit: cover;
+}
+
+/* Text content */
+.card-content {
+  padding: 15px;
+}
+
+/* Header row (title + price) */
+.card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 6px;
+}
+
+/* Title */
+.card-header h3 {
+  margin: 0;
+  font-size: 1.1rem;
+  color: #382c1d;
+  font-weight: 600;
+}
+
+/* Price */
+.price {
+  color: #b15724;
+  font-weight: 600;
+}
+
+/* Description */
+.card-content p {
+  margin: 0;
+  font-size: 0.9rem;
+  color: #520f0f;
+}

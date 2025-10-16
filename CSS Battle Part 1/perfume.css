@@ -1,0 +1,112 @@
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100vw;
+    background-color: rgba(192, 154, 71, 0.486);
+}
+
+.card-content{
+    display: flex;
+    align-items: center;
+    background-color: rgb(247, 234, 200);
+    border-radius: 15px 15px 15px 15px;
+    width: 550px;
+    height: 390px;
+}
+
+.product-img{
+    width: 230px;
+    height: 390px;
+    border-radius: 15px 0px 0px 15px;
+    
+}
+
+.product-details{
+    margin-left: 40px;;
+    font-family: 'Garamond', serif;
+    width: 300px;
+
+}
+
+.product-details h2{
+    font-family:"Courier New", monospace;
+    font-size: 20px;
+    color : rgba(1, 1, 3, 0.692);
+}
+
+.product-details h1{
+    font-size: 33px;
+    font-family: "Georgia",  serif;
+    color: rgba(53, 127, 177, 0.582);
+}
+
+.product-details p{
+    font-size: 22px;
+    color: rgba(8, 2, 2, 0.836);
+}
+
+.product-details button{
+
+    font-size: 21px;
+    background-color: rgb(82, 180, 78);
+    border:7;
+    border-radius: 5px;
+    cursor: pointer;
+    color: rgb(2, 24, 8);
+    font-family:'Courier New', Courier, monospace;
+}
+
+.new-price{
+    font-size: 21px;
+    color: rgb(180, 66, 66);
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.old-price{
+    font-size: 14px;
+    margin-top: 25px;
+    text-decoration: line-through;
+    color: rgb(180, 67, 67);
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif
+}
+
+
+@media screen and (max-width: 480px) {
+    .card-content {
+        width: 95%;
+        flex-direction: column;
+        height: auto;
+    }
+
+    .product-img {
+        width: 100%;
+        height: auto;
+    }
+
+    .product-details h1 {
+        font-size: 22px;
+    }
+
+    .product-details h2 {
+        font-size: 16px;
+    }
+
+    .product-details p {
+        font-size: 16px;
+    }
+
+    .new-price {
+        font-size: 18px;
+    }
+
+    .old-price {
+        font-size: 12px;
+    }
+
+    .product-details button {
+        font-size: 16px;
+        padding: 6px 12px;
+    }
+}

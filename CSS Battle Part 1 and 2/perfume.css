@@ -13,12 +13,12 @@ body{
     background-color: rgb(247, 234, 200);
     border-radius: 15px 15px 15px 15px;
     width: 550px;
-    height: 390px;
+    height: 450px;
 }
 
 .product-img{
-    width: 230px;
-    height: 390px;
+    width: 240px;
+    height: 450px;
     border-radius: 15px 0px 0px 15px;
     
 }
@@ -62,14 +62,37 @@ body{
     font-size: 21px;
     color: rgb(180, 66, 66);
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    justify-content: space-between;
 }
 
 .old-price{
     font-size: 14px;
-    margin-top: 25px;
+    margin: 20px;
     text-decoration: line-through;
     color: rgb(180, 67, 67);
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#discount {
+    width: 115px;
+    padding: 3px;
+    margin-top: 15px;
+    font-size: 13px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+}
+
+#apply-discount {
+    font-size: 14px;
+    margin-left: 4px;
+    padding: 3px 6px;
+    background-color: #4CAF50;
+    color: rgb(7, 7, 7);
+    border: 1px solid #000000;
+    border-radius: 4px;
+    cursor: pointer;
 }
 
 

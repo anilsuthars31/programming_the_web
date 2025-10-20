@@ -16,6 +16,8 @@ body{
 }
 
 .product-img{
+    margin-left: -40px;
+    margin-bottom: -4px;
     width: 240px;
     height: 450px;
     border-radius: 15px 0px 0px 15px;
@@ -23,7 +25,7 @@ body{
 }
 
 .product-details{
-    margin-left: 40px;;
+    margin-left: 5px;;
     font-family: 'Garamond', serif;
     width: 300px;
 

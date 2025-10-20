@@ -7,24 +7,33 @@
     <link rel="stylesheet" href="perfume.css">
     </head>
     <body>
-        <div class ="card">
+    <main>
+        <article class ="card">
             <div class="card-content">
+              <figure class="product-figure">
                 <img class="product-img" src="perfume.jpeg" alt="LV perfume">
-                <div class="product-details">
-                    <h2 class="heading">PERFUME</h2>
-                    <h1>Imagination Eau De Parfum</h1>
-                  <p>
-                    A vibrant, refined, and contemporary fragrance that captures the power of dreams and creativity.
-                  </p>
-                  <p>
-                    <span class="new-price">$259.99</span>
-                    <span class="old-price">$299.99</span>
-                  </p>
-                  <button class="button">Add to Cart</button>
-                  <input id="discount" type="number" placeholder="Enter discount %" /> 
-                  <button id="apply-discount">Apply Discount</button>
-                </div>
-        </div>
+              </figure>
+                
+              <section class="product-details">
+              <h2 class="heading">PERFUME</h2>
+              <h1>Imagination Eau De Parfum</h1>
+              <p class="product-description">
+              A vibrant, refined, and contemporary fragrance that captures the power of dreams and creativity.
+              </p>
+                  
+              <section class="price-section">
+              <span class="new-price">$259.99</span>
+              <span class="old-price">$299.99</span>
+              </section>
+
+              <section class="purchase-section">
+              <button class="button">Add to Cart</button>
+              <input id="discount" type="number" placeholder="Enter discount %" /> 
+              <button id="apply-discount">Apply Discount</button>
+              </section>
+            </section>
+          </article>
+        </main>
       <script src="perfume.js"></script>
     </body>         
 </html>

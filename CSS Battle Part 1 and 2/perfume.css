@@ -96,7 +96,7 @@ body{
 }
 
 
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 480px){
     .card-content {
         width: 95%;
         flex-direction: column;
@@ -131,5 +131,44 @@ body{
     .product-details button {
         font-size: 16px;
         padding: 6px 12px;
+    }
+}
+
+
+@media  screen and (max-width: 768) {
+    .card-content {
+        width: 80%;
+        flex-direction: column;
+        height: auto;
+    }
+
+    .product-img {
+        width: 100%;
+        height: auto;
+    }
+
+    .product-details h1 {
+        font-size: 26px;
+    }
+
+    .product-details h2 {
+        font-size: 18px;
+    }
+
+    .product-details p {
+        font-size: 18px;
+    }
+
+    .new-price {
+        font-size: 20px;
+    }
+
+    .old-price {
+        font-size: 14px;
+    }
+
+    .product-details button {
+        font-size: 18px;
+        padding: 8px 16px;
     }
 }

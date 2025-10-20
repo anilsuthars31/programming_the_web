@@ -46,6 +46,11 @@ body{
     padding: 10px;
 }
 
+/* aliases for numbered name classes so older markup variants still work */
+.name1, .name2, .name3 {
+    padding: 10px;
+}
+
 .review{
     background-color: rgb(197, 233, 228);
     border-radius: 20px;

@@ -1,9 +1,23 @@
 body{
 
-    background-color: rgb(243, 197, 197);
+    background-color: var(--page-bg);
     width: auto;
     height: auto;
 
+}
+
+/* theme variables for easy theming and better maintainability */
+:root{
+    --page-bg: rgba(126, 160, 211, 0.719);
+    --movie-bg: #696767; /* was rgb(105,103,102) */
+    --movie-text: #f3f3f3;
+    --review-bg: #ffffff;
+    --review-border: rgba(197, 233, 228, 0.95);
+    --card-shadow: 0 2px 8px rgba(0,0,0,0.06);
+    --card-shadow-hover: 0 16px 36px rgba(0,0,0,0.18);
+    --card-shadow-elevated: 0 8px 22px rgba(0,0,0,0.12);
+    --transition: 180ms ease;
+    --accent: #c5e9e4;
 }
 
 .reviews{
@@ -30,11 +44,16 @@ body{
 .salaar,
 .baahubali,
 .jersey{
-    background-color: rgb(146, 143, 141);
+    /* darker movie-card background to contrast with review cards */
+    background-color: var(--movie-bg);
+    color: var(--movie-text);
     width: 100%;
     border-radius: 15px;
     box-sizing: border-box;
     padding: 12px 16px 18px 16px; /* keep inner spacing */
+    transition: transform var(--transition), box-shadow var(--transition);
+    box-shadow: var(--card-shadow);
+    border: 1px solid rgba(0,0,0,0.06);
 }
 
 .person{
@@ -52,12 +71,41 @@ body{
 }
 
 .review{
-    background-color: rgb(197, 233, 228);
-    border-radius: 20px;
-    width: 90%;
-    padding: 5px;
+    /* review cards should contrast with movie cards */
+    background-color: var(--review-bg);
+    border-radius: 12px;
+    width: 100%;
+    padding: 12px;
     font-size: medium;
     font-weight: 200;
+    border: 1px solid var(--review-border);
+    box-shadow: var(--card-shadow);
+    transition: transform 150ms ease, box-shadow 150ms ease;
+}
+.review:hover{
+    transform: translateY(-4px);
+    box-shadow: var(--card-shadow-elevated);
+}
+
+/* movie card hover */
+.salaar:hover, .baahubali:hover, .jersey:hover {
+    transform: translateY(-6px);
+    box-shadow: var(--card-shadow-hover);
+}
+
+/* readable text on dark movie cards */
+.salaar p, .baahubali p, .jersey p, .salaar .name1, .baahubali .name2, .jersey .name3 {
+    color: var(--movie-text);
+}
+
+/* focus styles for keyboard users */
+.salaar:focus-within, .salaar:focus, .baahubali:focus-within, .baahubali:focus, .jersey:focus-within, .jersey:focus {
+    outline: 3px solid rgba(255,255,255,0.08);
+    outline-offset: 4px;
+}
+.review:focus-within, .review:focus {
+    outline: 3px solid rgba(0,0,0,0.06);
+    outline-offset: 3px;
 }
 
 .main-text{

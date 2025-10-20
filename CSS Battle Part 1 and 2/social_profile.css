@@ -44,57 +44,23 @@ body{
      border-radius: 15px;
 }
 
-.p1{
-    display:flex;
-    padding:20px
+.person{
+    display: flex;
+    padding: 20px;
 }
 
-.p2{
-    display:flex;
-    padding:20px
+.name{
+    padding: 10px;
 }
 
-.p3{
-    display:flex;
-    padding:20px
-} 
-.name1{
-    padding:10px;
-}
-
-.name2{
-    padding:10px;
-}
-
-.name3{
-    padding:10px;
-}
-
-.review1{
-    background-color:rgb(197, 233, 228);
-    border-radius: 20px;
-    width: 90%;
-    padding:5px;
-    font-size: medium;
-    font-weight: 200;
-}
-.review2{
+.review{
     background-color: rgb(197, 233, 228);
     border-radius: 20px;
     width: 90%;
-    padding:5px;
+    padding: 5px;
     font-size: medium;
     font-weight: 200;
 }
-
-.review3{
-    background-color: rgb(197, 233, 228);
-    border-radius: 20px;
-    width: 90%;
-    padding:5px;
-    font-size: medium;
-    font-weight: 200;
-};
 
 .main-text{
     font-family: 'Courier New', Courier, monospace;

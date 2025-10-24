@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>BMTC Timetable Demo</title>
+  <link rel="stylesheet" href="try.css">
+</head>
+<body>
+  <header class="app-header">
+    <h1>BMTC Timetable (Demo)</h1>
+    <p class="lead">Search a bus stop and see upcoming departures (mock data).</p>
+  </header>
+
+  <main class="container">
+    <!-- Search / select stop -->
+    <section class="search-panel">
+      <label for="stopInput">Search stop by name or code</label>
+      <div class="search-row">
+        <input id="stopInput" list="stops-list" placeholder="Type stop name or code" aria-label="Stop search">
+        <datalist id="stops-list"></datalist>
+        <button id="searchBtn">Search</button>
+      </div>
+      <div id="status" class="status" aria-live="polite"></div>
+    </section>
+
+    <!-- Map + display -->
+    <section class="info-panel">
+      <div id="map" class="map">Map: <span id="map-coords">(no stop)</span></div>
+      <div id="colorDisplay" class="display">Background Color: (default)</div>
+    </section>
+
+    <!-- Results / departures -->
+    <section class="results-panel">
+      <h2>Upcoming departures</h2>
+      <ul id="departures" class="departures"></ul>
+    </section>
+  </main>
+
+  <footer class="app-footer">
+    <small>Demo uses embedded mock GTFS-like data. No external API required.</small>
+  </footer>
+
+  <script src="try.js"></script>
+</body>
+</html>

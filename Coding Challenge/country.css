@@ -25,22 +25,18 @@ body{
  color:#000000;
 }
 
-.moon {
-  display:inline-flex;
-  align-items:center;
-  justify-content:center;
-  width: 33px;
-  height: 33px;
-  border-radius: 100%;
-  font-size:18px;
-}
-
 .Dark-mode{
   font-size:22px;
   margin-right:15px;
   border-radius:5px;
   border: 2px black;
   font-family: "Times New Roman", Times, serif
+}
+
+.Dark-mode:hover{
+  cursor: pointer;
+  transform: scale(1.05);
+  transition: transform 0.2s ease;
 }
 
 
@@ -82,6 +78,13 @@ body{
   border:1px solid #e6e7ea;
   background:#fff;
   min-width:180px;
+}
+#regionFilter:hover,
+#searchInput:hover{
+  box-shadow:0 6px 18px rgba(15,23,42,0.1);
+  cursor: pointer;
+  transform: scale(1.02);
+  transition: transform 0.2s ease;
 }
 
 /* Dark theme overrides - toggled by adding .dark-theme to <body> */
@@ -149,6 +152,11 @@ body{
   flex-direction:column;
   width:260px; /* matches the grid column width */
   margin:0; /* spacing is handled by grid gap */
+}
+.country-card:hover{
+  cursor: pointer;
+  transform: scale(1.03);
+  transition: transform 0.3s ease;
 }
 
 /* Responsive breakpoints: reduce number of columns on smaller screens */

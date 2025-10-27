@@ -6,23 +6,13 @@
   background-color:#ffffff;
   margin: 0px 0px 15px 0px;
   padding-left:75px;
-    padding-right: 120px;
-}
-
-/* Document defaults (light theme) */
-body{
-  background-color: #d7d9df;
-  color: #37589e;
-  font-family: Arial, Helvetica, sans-serif;
-  margin:0;
+  padding-right: 120px;
 }
 
 .logo{
-  font-size:42px;
-  font-weight:500;
-  margin-left:15px;
-  font-family: "Times New Roman", Times, serif;
- color:#000000;
+  font-size:24px;
+  font-weight:700;
+  font-family: "Times New Roman", Times, serif
 }
 
 .Dark-mode{
@@ -53,11 +43,11 @@ body{
   max-width:1700px;
   padding-left: 150px;
   padding-right: 240px;
-
+  margin-bottom: 30px;
 }
 
 #searchInput{
-  flex:0 1 520px; /* don't grow too large, allow shrinking */
+  flex:0 1 520px;
   max-width:520px;
   width:100%;
   padding:12px 14px;
@@ -87,7 +77,7 @@ body{
   transition: transform 0.2s ease;
 }
 
-/* Dark theme overrides - toggled by adding .dark-theme to <body> */
+/* Dark theme overrides */
 .dark-theme{
   background-color:#0b1220;
   color:#e6eef8;
@@ -98,7 +88,7 @@ body{
   box-shadow: none;
 }
 
-.dark-theme .country-card{
+.dark-theme .card{
   background-color:#0f1724;
   box-shadow: 0 6px 18px rgba(2,6,23,0.6);
 }
@@ -120,61 +110,93 @@ body{
   color: #e6eef8;
 }
 
-/* Container for country cards (grid-like, responsive) */
-.wrap-main-grid{
-  /* switch to grid so we can control columns precisely */
-  display: grid;
-  grid-template-columns: repeat(4, 260px); /* 4 cards per row on wide screens */
-  justify-content: center;
-  gap: 20px;
-  max-width:1200px;
-  margin:0 auto;
-  padding:16px;
+.dark-theme .body{
+    background-color:#0b1220;
+    color:#e6eef8;
 }
 
 .flag{
-  width:100%;
-  height:160px;
+  width:150px;
+  height:150px;
   object-fit:cover;
   display:block;
+  border-radius: 5px 5px 0 0;
 }
 
-.card-info{
-  padding:14px 16px 20px 16px;
+/* Fixed: Container should have grid, not individual cards */
+#country-card{
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 30px;
+  padding: 0 150px;
+  max-width: 1700px;
+  margin: 0 auto;
 }
 
-.country-card{
+/* Fixed: Individual cards should be flex containers */
+.card{
   background-color:#ffffff;
   box-shadow:0 6px 18px rgba(15,23,42,0.06);
   border-radius:8px;
-  overflow:hidden;
-  display:flex;
-  flex-direction:column;
-  width:260px; /* matches the grid column width */
-  margin:0; /* spacing is handled by grid gap */
-}
-.country-card:hover{
-  cursor: pointer;
-  transform: scale(1.03);
-  transition: transform 0.3s ease;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.2s ease;
 }
 
-/* Responsive breakpoints: reduce number of columns on smaller screens */
+.card:hover{
+  transform: translateY(-5px);
+  box-shadow:0 8px 24px rgba(15,23,42,0.12);
+}
+
+.card-info{
+  padding: 20px;
+  flex-grow: 1;
+}
+
+.country-name{
+  margin: 0 0 15px 0;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.card-info p{
+  margin: 8px 0;
+  font-size: 14px;
+}
+
+/* Responsive breakpoints */
 @media (max-width: 1100px) {
-  .wrap-main-grid{
+  #country-card{
     grid-template-columns: repeat(3, 1fr);
+    padding: 0 75px;
   }
-  .country-card{ width: auto; }
 }
 
 @media (max-width: 820px) {
-  .wrap-main-grid{
+  #country-card{
     grid-template-columns: repeat(2, 1fr);
+    padding: 0 50px;
+  }
+  .search-row{
+    padding-left: 50px;
+    padding-right: 50px;
   }
 }
 
 @media (max-width: 480px) {
-  .wrap-main-grid{
+  #country-card{
     grid-template-columns: 1fr;
+    padding: 0 20px;
+  }
+  .search-row{
+    flex-direction: column;
+    gap: 15px;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+  #searchInput, #regionFilter{
+    width: 100%;
+    max-width: 100%;
   }
 }

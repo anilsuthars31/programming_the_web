@@ -66,6 +66,17 @@ region.addEventListener('change', e => {
   getData(v ? `https://restcountries.com/v3.1/region/${encodeURIComponent(v)}` : 'https://restcountries.com/v3.1/all');
 });
 
-darkBtn.addEventListener('click', () => document.body.classList.toggle('dark-theme'));
+if (darkBtn) {
+  darkBtn.addEventListener('click', () => {
+    const added = document.body.classList.toggle('dark-theme');
+    console.log('Dark mode toggled. now dark-theme =', added);
+  });
+} else {
+  console.warn('Dark mode button not found: .Dark-mode');
+}
 
 getData();
+
+
+
+

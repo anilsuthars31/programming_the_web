@@ -13,8 +13,7 @@
       <h1 class="logo">Where in the world ? </h1>
     </div>
     <div class ="dark-mode-toggle">
-      <!-- missing `darkmode.gif` was causing a 404 in the console; replace with a small inline marker -->
-      <button class="Dark-mode">🌙Dark mode</button>
+      <button class="Dark-mode" id="Dark-mode">🌙Dark mode</button>
     </div>
   </header>
 
@@ -28,21 +27,19 @@
           <option>Europe</option>
           <option>Oceania</option>
         </select>
-      </div>
-  <main class="wrap-main-grid">
-      
+      </div>      
 
- <div class="country-card">
+ <div class="country-card" id="country-card">
   <img src="https://flagcdn.com/de.svg" class="flag" alt="Flag">
   <div class="card-info">
-    <h3 class="country-name">Germany</h3>
+    <h3 class="country-name" id="country-name">Germany</h3>
     <p>Population: 81,770,900</p>
     <p>Region: Europe</p>
     <p id ="capital">Capital: Berlin</p>
   </div>
   </div>
 
-  <script src="country.js" defer></script>
+  <script src="co.js"></script>
 </body>
 </html>
 

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Visual Dictionary</title>
+    <link rel="stylesheet" href="./style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="header">
+        <div class="header-content">
+            <h1>VISUAL DICTIONARY</h1>
+            <div class="buttons">
+                <button class="toggle-theme" id="toggle-theme">🌙 Toggle Theme</button>
+                <button class="colorblindness" id="colorblindness">👁️ Colorblind Mode</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="main-container">
+        <div class="search-container">
+            <input type="text" id="search" placeholder="Search for a word...">
+            <button id="search-btn">🔍 Search</button>
+        </div>
+
+        <div class="loading" id="loading">
+            <div class="spinner"></div>
+            <p>Loading...</p>
+        </div>
+
+        <div class="content-grid">
+            <div class="description-card">
+                <h2>Word Definition</h2>
+                <p id="description-text">This is gonna be the description of the image...here you can see a rough summary of the word you searched for!</p>
+                <button class="speech speech-btn" id="speech">🔊 Text-to-Speech</button>
+            </div>
+
+            <div class="image-card">
+                <img class="img" id="main-img" src="https://th.bing.com/th/id/OIP.F4QEGEFjKSQK5zlqHIEgTwHaE7?w=289&h=193&c=7&r=0&o=7&dpr=1.3&pid=1.7&rm=3" alt="Visual representation">
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -6,8 +6,8 @@ const body = document.body;
 
 toggleThemeBtn.addEventListener('click', () => {
     body.classList.toggle('dark-theme');
-    const icon = body.classList.contains('dark-theme') ? '☀️' : '🌙';
-    toggleThemeBtn.textContent = `${icon} Toggle Theme`;
+    const icon = body.classList.contains('dark-theme') ? '☀️ light mode' : '🌙 dark mode';
+    toggleThemeBtn.textContent = `${icon}`;
 });
 
 colorblindBtn.addEventListener('click', () => {
